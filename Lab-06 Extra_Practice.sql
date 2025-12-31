@@ -42,11 +42,7 @@ INSERT INTO TRANSACTION_DETAILS VALUES
 -- Delete transactions done before 01-FEB-2024.
 -- Delete transactions of AccountNo = 201.
 
--- Delete transactions whose AccountNo does not exist in ACCOUNT table.
--- Delete accounts which do not have any transactions.
--- Delete transactions of customers whose Balance < 6000.
--- Delete accounts whose AccountType is SAVING and Balance < 7000.
--- Delete transactions where customer name is SUNIL.
+
 -- Remove all records from TRANSACTION_DETAILS table.
 -- Remove all records from ACCOUNT table.
 -- Drop the TRANSACTION_DETAILS table completely.
