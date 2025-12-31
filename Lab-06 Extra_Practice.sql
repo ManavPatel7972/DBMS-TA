@@ -1,6 +1,6 @@
 -- table 1
 CREATE TABLE ACCOUNT (
-    AccountNo INT PRIMARY KEY,
+    AccountNo INT,
     CustomerName VARCHAR(50) NOT NULL,
     AccountType VARCHAR(20),
     Balance DECIMAL(10,2),
