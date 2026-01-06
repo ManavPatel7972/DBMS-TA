@@ -1,50 +1,75 @@
--- table 1
-CREATE TABLE ACCOUNT (
-    AccountNo INT,
-    CustomerName VARCHAR(50) NOT NULL,
-    AccountType VARCHAR(20),
-    Balance DECIMAL(10,2),
-    OpenDate DATE
+
+
+CREATE TABLE STUDENT (
+    StudentID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Department VARCHAR(30),
+    City VARCHAR(30),
+    Fees INT
 );
 
-INSERT INTO ACCOUNT VALUES
-(201, 'ANIL', 'SAVING', 5000, '2020-01-15'),
-(202, 'SUNIL', 'CURRENT', 12000, '2019-03-10'),
-(203, 'MEHUL', 'SAVING', 3000, '2021-07-20'),
-(204, 'MADHURI', 'SAVING', 8000, '2018-11-05'),
-(205, 'KRANTI', 'CURRENT', 15000, '2022-02-18');
+INSERT INTO STUDENT VALUES
+(1, 'Amit', 'CSE', 'Ahmedabad', 50000),
+(2, 'Neha', 'IT', 'Surat', 45000),
+(3, 'Raj', 'CSE', 'Rajkot', 48000),
+(4, 'Priya', 'ME', 'Ahmedabad', 40000),
+(5, 'Karan', 'CSE', 'Vadodara', 52000);
 
 
--- table-2
-CREATE TABLE TRANSACTION_DETAILS (
-    TransactionID INT,
-    AccountNo INT,
-    TransactionType VARCHAR(10),   -- CREDIT / DEBIT
-    Amount DECIMAL(10,2),
-    TransactionDate DATE
+
+CREATE TABLE COURSE (
+    CourseID INT PRIMARY KEY,
+    CourseName VARCHAR(50),
+    Department VARCHAR(30),
+    Credits INT
 );
 
-INSERT INTO TRANSACTION_DETAILS VALUES
-(1, 201, 'CREDIT', 2000, '2024-01-05'),
-(2, 201, 'DEBIT', 1000, '2024-01-10'),
-(3, 202, 'DEBIT', 3000, '2024-02-15'),
-(4, 203, 'CREDIT', 1500, '2024-03-20'),
-(5, 205, 'DEBIT', 5000, '2024-04-25');
-
--- Delete account record where AccountNo = 203.
--- Delete all accounts whose Balance < 5000.
--- Delete account of customer KRANTI.
--- Delete accounts opened before 01-JAN-2019.
--- Delete all CURRENT type accounts.
--- Delete transaction where TransactionID = 2.
--- Delete all DEBIT transactions.
--- Delete transactions where Amount > 4000.
--- Delete transactions done before 01-FEB-2024.
--- Delete transactions of AccountNo = 201.
+INSERT INTO COURSE VALUES
+(101, 'DBMS', 'CSE', 4),
+(102, 'OS', 'CSE', 3),
+(103, 'CN', 'IT', 4),
+(104, 'Thermodynamics', 'ME', 3);
 
 
--- Remove all records from TRANSACTION_DETAILS table.
--- Remove all records from ACCOUNT table.
--- Drop the TRANSACTION_DETAILS table completely.
--- Drop the ACCOUNT table completely.
--- Drop both tables (write two DROP statements).
+-- Delete the student whose StudentID is 5.
+-- 2️⃣ Delete all students who belong to Ahmedabad city.
+-- 4️⃣ Delete all students from CSE department.
+-- 3️⃣ Delete students whose fees are greater than 50,000.
+
+-- 5️⃣ Delete the student whose name is 'Neha'.
+
+-- 6️⃣ Delete all courses having credits less than 4.
+
+-- 7️⃣ Delete courses that belong to the IT department.
+
+-- 8️⃣ Delete students who are not from Surat.
+
+-- 9️⃣ Delete students who are from CSE department and Surat city.
+
+-- 🔟 Delete students whose fees are between 45,000 and 50,000.
+
+-- 🔹 TRUNCATE (Remove all rows, keep structure)
+
+-- 1️⃣1️⃣ Remove all records from the STUDENT table using truncate.
+
+-- 1️⃣2️⃣ Remove all records from the COURSE table using truncate.
+
+-- 1️⃣3️⃣ After truncating STUDENT table, insert one new student record.
+
+-- 1️⃣4️⃣ Check whether data exists after truncating the COURSE table.
+
+-- 🔹 DROP (Remove table completely)
+
+-- 1️⃣5️⃣ Remove the STUDENT table permanently from database.
+
+-- 1️⃣6️⃣ Remove the COURSE table permanently from database.
+
+-- 1️⃣7️⃣ Drop both STUDENT and COURSE tables together.
+
+-- 1️⃣8️⃣ Drop STUDENT table only if it exists.
+
+-- 🔹 MIXED / THINKING QUESTIONS (EXAM-FRIENDLY)
+
+-- 1️⃣9️⃣ Remove all student records without using TRUNCATE.
+
+-- 2️⃣0️⃣ First remove all records from COURSE table, then delete the table structure.
