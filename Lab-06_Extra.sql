@@ -1,7 +1,7 @@
 
 
 CREATE TABLE STUDENT (
-    StudentID INT PRIMARY KEY,
+    StudentID INT ,
     Name VARCHAR(50),
     Department VARCHAR(30),
     City VARCHAR(30),
@@ -18,7 +18,7 @@ INSERT INTO STUDENT VALUES
 
 
 CREATE TABLE COURSE (
-    CourseID INT PRIMARY KEY,
+    CourseID INT,
     CourseName VARCHAR(50),
     Department VARCHAR(30),
     Credits INT
