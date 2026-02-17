@@ -11,7 +11,7 @@ INSERT INTO Cricket (Name, City, Age) VALUES
 ('Suresh Raina', 'Gujarat', 30);
 
 
-CREATE TABLE SalesOrders (
+CREATE TABLE SalesRecords (
     OrderID INT PRIMARY KEY,
     ProductID INT,
     ProductName VARCHAR(50),
