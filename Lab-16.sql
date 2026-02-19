@@ -21,6 +21,7 @@ CREATE TABLE SalesRecords (
 );
 
 
+
 INSERT INTO SalesOrders (OrderID, ProductID, ProductName, Qty, SaleDate, Region) VALUES
 (1, 10, 'Laptop', 25, '2025-10-01', 'North'),
 (2, 20, 'Monitor', 60, '2025-10-05', 'South'),
